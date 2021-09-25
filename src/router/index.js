@@ -5,6 +5,7 @@ Vue.use(VueRouter);
 const Home = () => import('../views/home/Home');
 const Profile = () => import('../views/profile/Profile');
 const Category = () => import('../views/category/Category');
+const Detail = () => import('../views/detail/Detail');
 
 const routes = [
   {
@@ -22,6 +23,10 @@ const routes = [
   {
     path: '/category',
     component: Category
+  },
+  {
+    path: '/detail',
+    component: Detail
   }
 ];
 

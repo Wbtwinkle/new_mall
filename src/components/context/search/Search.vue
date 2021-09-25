@@ -107,6 +107,13 @@
     -moz-border-radius: 15px;
     border-radius: 15px;
   }
+  .text-section {
+    position: absolute;
+    z-index: 10;
+    top: 44px;
+    left: 0;
+    right: 0;
+  }
   .text-section div {
     padding-left: 10px;
     height: 30px;

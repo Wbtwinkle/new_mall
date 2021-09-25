@@ -1,13 +1,18 @@
 <template>
-  <div>
+  <div class="home">
     <Search :search_data="data"></Search>
-    <home-swiper class="home-swiper" :banners="banners"></home-swiper>
-    <home-blogs></home-blogs>
+    <scroll class="content"
+            ref="scroll"
+            :probeType="3">
+      <home-swiper class="home-swiper" :banners="banners"></home-swiper>
+      <home-blogs></home-blogs>
+    </scroll>
   </div>
 </template>
 
 <script>
   import Search from 'components/context/search/Search'
+  import Scroll from 'components/common/scroll/Scroll'
 
   import HomeSwiper from './homeChildren/HomeSwiper'
   import HomeBlogs from './homeChildren/HomeBlogs'
@@ -54,13 +59,27 @@
     components: {
       Search,
       HomeSwiper,
-      HomeBlogs
+      HomeBlogs,
+      Scroll
     }
   }
 </script>
 
 <style scoped>
+  .home {
+    position: relative;
+    height: 100vh;
+    background-color: #f5f2e9;
+  }
   .home-swiper {
     /*padding-top: 44px;*/
+  }
+  .content {
+    overflow: hidden;
+    position: absolute;
+    top: 44px;
+    bottom: 49px;
+    left: 0;
+    right: 0;
   }
 </style>

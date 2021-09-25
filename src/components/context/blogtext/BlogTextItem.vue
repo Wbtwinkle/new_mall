@@ -57,7 +57,9 @@
     },
     methods: {
       openThisBlog() {
-
+        this.$router.push({
+          path: 'detail'
+        })
       }
     }
   }
